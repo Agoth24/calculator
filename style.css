@@ -1,0 +1,28 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+}
+.calc-container {
+    display: flex;
+    flex-direction: column;
+    margin: 10% 0%;
+}
+
+.output {
+    display: flex;
+}
+
+.button-container {
+    display: flex;
+}
+
+.button {
+    width: 25px;
+    height: 25px;
+    background-color: #f9faf8;
+    color: navy;
+}
