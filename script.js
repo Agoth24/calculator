@@ -12,31 +12,27 @@ const operate = (a, b, operation) => operation(a, b);
 // END OF OPERATIONS
 
 // SELECTORS
-let outputScreen = document.querySelector(".current-output");
+const outputScreen = document.querySelector(".current-output");
 const buttonContainer = document.querySelector(".button-container");
-let currentInput = '';
+let currentInput = "";
 
 const populateScreen = (element) => {
   outputScreen.textContent = element;
 };
 
-
 // EVENT DELEGATION
 buttonContainer.addEventListener("click", (e) => {
   if (!e.target.matches("button")) return;
 
+  // Gets the value of the element clicked on
   const value = e.target.dataset.value;
 
-  if (value === "AC") {
-    currentOutput = "";
-    outputScreen.textContent = ""
+  if (e.target.classList.contains("number")) {
+    currentInput += value;
+  } else if (e.target.classList.contains("operator")) {
+  } else if (value === "AC") {
+    currentInput = "";
+  } else if (value === "Delete") {
+    currentInput = currentInput.slice(0, -1);
   }
-});
-
-buttons.forEach((button) => {
-  button.addEventListener("click", () => {
-    if (button.dataset)
-    currentInput += button.textContent;
-    outputScreen.textContent = currentInput;
-  });
 });
