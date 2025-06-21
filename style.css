@@ -5,6 +5,7 @@
 body {
     display: flex;
     justify-content: center;
+    background: linear-gradient(to right, #00AAFF, #00FF6C);
 }
 .calc-container {
     background-color: grey;
@@ -50,11 +51,16 @@ body {
     width: 100px;
     height: 100px;
     flex: auto;
-    background-color: #f9faf8;
+    background-color: rgb(160, 209, 210);
     color: navy;
     border-style: none;
     border-radius: 10px;
     font-family: 'Courier New', Courier, monospace;
     color: black;
     font-size: 24px;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: white;
 }
